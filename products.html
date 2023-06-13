@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="./dist/css/index.css" />
     <script src="https://kit.fontawesome.com/b20f5915ff.js" crossorigin="anonymous"></script>
+    <script src="./src/js/index.js" defer type="module"></script>
     <title>EC-Products | Products</title>
   </head>
   <body>
@@ -27,6 +28,7 @@
             href="/index.html"
             class="navbar-brand align-items-center"
             ><img
+            id="redirect_logo"
             src="./src/assets/ec_logo.png"
             width="60"
             height="60"
@@ -60,17 +62,15 @@
             </div>
 
             <!-- Logout button -->
-            <div class="">
-              <!-- Remove or hide this for non-registered users -->
-              <button
-                class="logout_button"
-                type="button"
-                data-auth="logout"
-                data-visible="loggedIn"
-              >
-                <span> LOGOUT</span>
-              </button>
-            </div>
+            <!-- Remove or hide this for non-registered users -->
+            <button
+            class="logout-button"
+            type="button"
+            data-auth="logout"
+            data-visible="loggedIn"
+          >
+            <span> LOGOUT</span>
+          </button>
 
             <!-- Hamburger menu for small screens -->
             <button
