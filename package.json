@@ -2,7 +2,7 @@
   "name": "javascript2_resit",
   "version": "0.0.3",
   "description": "Trello: https://trello.com/invite/b/LRRriuq4/ATTI4ba0cbe4dd3a1d2f4835acdc69afee831C6AAA3D/javascript2resit",
-  "main": "index.js",
+  "main": "./src/js/index.js",
   "scripts": {
     "build": "sass src/scss:dist/css",
     "test": "echo \"Error: no test specified\" && exit 1",

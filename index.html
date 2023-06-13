@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="./dist/css/index.css" />
     <script src="https://kit.fontawesome.com/b20f5915ff.js" crossorigin="anonymous"></script>
+    <script src="./src/js/index.js" defer type="module"></script>
     <title>EC-Products | Index</title>
   </head>
   <body>
@@ -27,6 +28,7 @@
             href="/index.html"
             class="navbar-brand align-items-center"
             ><img
+            id="redirect_logo"
             src="./src/assets/ec_logo.png"
             width="60"
             height="60"
@@ -48,7 +50,7 @@
                   <a href="/home.html" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
-                  <a href="/entries.html" class="nav-link">ART</a>
+                  <a href="/products.html" class="nav-link">PRODUCTS</a>
                 </li>
                 <li class="nav-item" data-visible="loggedIn">
                   <a href="/profile.html" class="nav-link nav-profile"
@@ -60,17 +62,15 @@
             </div>
 
             <!-- Logout button -->
-            <div class="">
-              <!-- Remove or hide this for non-registered users -->
-              <button
-                class="logout_button"
-                type="button"
-                data-auth="logout"
-                data-visible="loggedIn"
-              >
-                <span> LOGOUT</span>
-              </button>
-            </div>
+            <!-- Remove or hide this for non-registered users -->
+            <button
+            class="logout-button"
+            type="button"
+            data-auth="logout"
+            data-visible="loggedIn"
+          >
+            <span> LOGOUT</span>
+          </button>
 
             <!-- Hamburger menu for small screens -->
             <button
@@ -99,7 +99,6 @@
             <!-- Login Form -->
             <form id="loginForm">
 
-              <div class="label-section">
                 <div class="form-control mb-3">
                     <label for="loginUsername">Username</label>
                     <input
@@ -107,22 +106,19 @@
                     type="text"
                     class="form-control"
                     id="loginUsername"
-                    name="email"
-                    pattern="[\w\-.]+@(stud.)?noroff.no$"
-                    title="Only Noroff student or teacher emails are valid."
+                    name="username"
                     placeholder="Username"
                   />
                 </div>
-              </div>
 
-              <div class="label-section">
+              
                 
                 <div class="form-control mb-3">
                     <label for="loginPassword">Password</label>
                     <input
                     required
                     type="password"
-                    minlength="8"
+                    minlength="7"
                     class="form-control"
                     id="loginPassword"
                     name="password"
@@ -130,7 +126,6 @@
                   />
                   
                 </div>
-              </div>
 
                 <button type="submit" class="button-submit login-button">LOGIN</button>
               </form>
