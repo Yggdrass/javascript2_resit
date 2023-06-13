@@ -1,14 +1,19 @@
 {
   "name": "javascript2_resit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Trello: https://trello.com/invite/b/LRRriuq4/ATTI4ba0cbe4dd3a1d2f4835acdc69afee831C6AAA3D/javascript2resit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass src/scss:dist/css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch src/scss:dist/css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.63.3"
   }
 }
