@@ -1,5 +1,5 @@
 import { save } from "../storage/save.js";
-import { API_LOGIN_URL } from "../api/api_base.js";
+//import { API_LOGIN_URL } from "../api/api_base.js";
 
 /**
  * This function logs the user in and sends them to their profile page.
@@ -34,7 +34,7 @@ export async function loginUser(url, userData) {
     localStorage.setItem("accessToken", result.token);
 
     if (response.ok) {
-      alert("You have successfully logged in!");
+      alert("${result.username} You have successfully logged in!");
       save("profile", result);
       location.href = `./profile.html?view=profile&name=${result.username}`;
     } else {

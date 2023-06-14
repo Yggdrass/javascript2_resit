@@ -1,5 +1,6 @@
 .logout-button,
-.login-button {
+.login-button,
+.createProduct-button {
   border: none;
   color: var(--white);
   font-weight: bold;
@@ -17,7 +18,8 @@
   background-color: var(--secondary);
 }
 
-.login-button {
+.login-button,
+.createProduct-button {
   background-color: var(--tertiary);
   margin: 2rem;
 }
