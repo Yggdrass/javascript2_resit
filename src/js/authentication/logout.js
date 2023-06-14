@@ -4,11 +4,11 @@
 
 export function logout() {
   try {
-    localStorage.remove("accessToken");
-    if (logout.ok) {
-      location.href = "./index.html";
-    }
+    localStorage.removeItem("accessToken");
+    location.href = "./index.html";
+    alert("You have successfully logged out!");
   } catch (error) {
+    alert("Error! Logout failed!");
     console.log(error);
   }
 }

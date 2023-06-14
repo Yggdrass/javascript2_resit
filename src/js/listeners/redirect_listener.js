@@ -1,35 +1,23 @@
-//import { isLoggedIn } from "../authentication/state.js";
-import { load } from "../storage/load.js";
-
-export const isLoggedIn = () => Boolean(load("accessToken"));
-
 /**
- * This form gathers information from a form and passes it into the function loginUser().
+ * This listens for a click on the logo image in the Navbar and redirects the user to the Home.html if they are already logged in. If not they will go to index.html which is where the logo originally sends them.
  */
+
+export const isLoggedIn = localStorage.getItem("accessToken");
+//console.log(isLoggedIn);
 
 export function redirectListener() {
   const logo = document.getElementById("redirect_logo");
 
-  try {
-    logo.addEventListener("onClick", (event) => {
+  if (isLoggedIn) {
+    logo.addEventListener("click", (event) => {
       event.preventDefault();
-
-      // Sends to the API
-
       console.log(event);
-    });
 
-    if (isLoggedIn) {
-      console.log(isLoggedIn);
       alert("You don't need to log in, go home instead!");
-      location.href = `./home.html`;
-      return false;
-    } else {
-      alert("Error! Redirect failed!");
-    }
-    return false;
-  } catch (error) {
-    console.log(error);
+      window.location.replace("./home.html");
+    });
+  } else {
+    //console.log("Error : User is logged out");
   }
 }
 

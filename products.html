@@ -90,7 +90,34 @@
     </header>
 
     <!-- Main -->
-    <main></main>
+    <main>
+
+       <!-- Search Bar -->
+       <div
+       class="artListingsContainer searchListings d-flex py-5 mt-3 align-items-center justify-content-md-center"
+       id="searchEntries"
+     >
+       <h3 class="searchTitle m-0">Search for Art</h3>
+       <i class="fa-solid fa-magnifying-glass mx-4"></i>
+       <form class="d-flex">
+         <label for="search-entries"></label>
+         <input
+           class="form-control searchListingsInput p-1 ml-2"
+           id="search-entries"
+           type="search"
+           placeholder="Search"
+           aria-label="Search"
+         />
+         <button class="btn btn-primary" type="submit">Search</button>
+       </form>
+     </div>
+
+     <!-- Art Listings Container -->
+     <div class="artListingsContainer d-flex-column mx-auto mt-3">
+       <div id="products-container"></div>
+     </div>
+
+    </main>
 
     <!-- Footer -->
     <footer>

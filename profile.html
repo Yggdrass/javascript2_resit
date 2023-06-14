@@ -96,7 +96,43 @@
       <div id="profile-container"></div>
 
       <!-- This is where the user will be able to create a product using a JS function -->
-      <div id="create-product-container"></div>
+      <div id="create-product-container">
+        <div id="ceateProductContainer" class="artListingsContainer  mx-auto mt-3">
+          <!-- Create Product Card -->
+          <div class="ceateProductContainer container align-items-center justify-content-center mx-auto">
+            <div class=" d-flex-column product-info px-4 py-3">
+              <div class="row pb-3">
+                <h2 class="text-center">CREATE PRODUCT</h2>
+              </div>
+  
+              <div class="row d-flex-column justify-content-center pb-3">
+                <form id="createProduct">
+                  <!-- product Title -->
+                  <div class="form-control col-10 mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input
+                      type="text"
+                      id="title"
+                      name="title"
+                      placeholder="Title of product"
+                    />
+                  </div>
+  
+  
+                  
+  
+                  <!-- Submit Entry Button -->
+                  <div class="col-12 d-flex justify-content-md-end pt-3">
+                    <button class="button createProduct-button" type="submit">
+                      CREATE PRODUCT
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      </div>
 
       <!-- This is where the users created products will be shown using a JS function -->
       <div id="my-products-container"></div>
