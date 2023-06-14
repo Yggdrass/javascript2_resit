@@ -2,3 +2,13 @@ h1 {
   font-size: 4rem;
   color: var(--black);
 }
+
+.profileAttribute,
+.productDescriptionText {
+  font-size: 1.5rem;
+}
+
+.productDescriptionText {
+  border: solid var(--white) 2px;
+  padding: 1rem;
+}

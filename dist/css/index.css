@@ -23,7 +23,11 @@ input {
   padding: 1rem;
 }
 
-.loginForm-container {
+.loginForm-container,
+.profileCard,
+.ceateProductContainer,
+.productCard,
+.productDetails {
   background-color: var(--secondary);
   color: var(--white);
   max-width: 50rem;
@@ -38,6 +42,11 @@ input {
   justify-content: center;
 }
 
+.productCard {
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -45,7 +54,8 @@ body {
 }
 
 .logout-button,
-.login-button {
+.login-button,
+.createProduct-button {
   border: none;
   color: var(--white);
   font-weight: bold;
@@ -63,7 +73,8 @@ body {
   background-color: var(--secondary);
 }
 
-.login-button {
+.login-button,
+.createProduct-button {
   background-color: var(--tertiary);
   margin: 2rem;
 }
@@ -141,6 +152,16 @@ main {
 h1 {
   font-size: 4rem;
   color: var(--black);
+}
+
+.profileAttribute,
+.productDescriptionText {
+  font-size: 1.5rem;
+}
+
+.productDescriptionText {
+  border: solid var(--white) 2px;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

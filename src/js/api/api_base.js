@@ -6,16 +6,16 @@ export const baseUrl = "https://dummyjson.com";
 
 export const API_LOGIN_URL = "https://dummyjson.com/auth/login";
 
-export const productsUrl = `${baseUrl} + products`;
+export const API_ALL_ENTRIES_URL = "https://dummyjson.com/products/";
 
-export const singleProductUrl = `${baseUrl} + products/id`;
+export const SINGLE_PRODUCT_URL = "https://dummyjson.com/products/";
 
-export const searchProductsUrl = `${baseUrl} + products/search?q=phone`;
+//export const searchProductsUrl = `${baseUrl} + products/search?q=phone`;
 
-export const addProductUrl = `${baseUrl} + products/add`;
+export const API_CREATE_PRODUCT_URL = "https://dummyjson.com/products/add";
 
-export const updateProductUrl = `${baseUrl} + products/id`;
+//export const updateProductUrl = `${baseUrl} + products/id`;
 
-export const deleteProductUrl = `${baseUrl} + products/id`;
+//export const deleteProductUrl = `${baseUrl} + products/id`;
 
-export const singleUserUrl = `${baseUrl} + users/id`;
+export const API_SINGLE_PROFILE_URL = "https://dummyjson.com/users/";
