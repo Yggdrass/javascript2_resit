@@ -26,19 +26,18 @@ export async function createProduct(url, entryData) {
     };
 
     const response = await fetch(url, postData);
-    //console.log("createProduct()) Response :", response);
+    console.log("createProduct()) Response :", response);
     const result = await response.json();
-    //console.log("createProduct() Result :", result);
+    console.log("createProduct() Result :", result);
     if (response.ok) {
-      alert("Your product '${result.title}' have successfully been added!");
+      alert(`Your product '${result.title}' have successfully been added!`);
     } else {
       alert("Error! Product failed to add!");
     }
-    return result;
   } catch (error) {
-    //console.log(error);
+    console.log(error);
   }
 }
 
 createProduct();
-//console.log("Function :", createEntry);
+//console.log("Function :", createProduct);

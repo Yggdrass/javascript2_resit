@@ -2,7 +2,7 @@ import { loginUser } from "../authentication/login.js";
 import { API_LOGIN_URL } from "../api/api_base.js";
 
 const loginURL = `${API_LOGIN_URL}`;
-console.log("loginUrl :", loginURL);
+//console.log("loginUrl :", loginURL);
 
 /**
  * This form gathers information from a form and passes it into the function loginUser().
@@ -16,7 +16,7 @@ export async function loginFormListener() {
       const form = event.target;
       const formData = new FormData(form);
       const userData = Object.fromEntries(formData.entries());
-      console.log("userToLogin :", userData);
+      //console.log("userToLogin :", userData);
 
       // Sends to the API
       loginUser(loginURL, userData);

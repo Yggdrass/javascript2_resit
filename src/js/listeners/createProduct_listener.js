@@ -7,7 +7,7 @@ const createProductURL = `${API_CREATE_PRODUCT_URL}`;
 /**
  * This function gathers the information from a form and passes it to the server as an Product.
  */
-export async function createProductListener() {
+export function createProductListener() {
   const createProductForm = document.getElementById("createProduct");
   //console.log("Create Product Form :", createProductForm);
 
@@ -23,6 +23,8 @@ export async function createProductListener() {
       createProduct(createProductURL, entryData);
       //console.log("Function :", createProduct);
     });
+  } else {
+    console.log("error");
   }
 }
 

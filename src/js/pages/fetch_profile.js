@@ -48,14 +48,8 @@ export async function fetchProfile() {
 
     createProfilePage(profile);
     //console.log("Function :", fetchProfile);
-
-    //createUpdateAvatar();
-    //console.log("Function :", fetchProfile);
-
-    //createProductForm();
-    //console.log("Function :", createcreateProduct);
   } catch (error) {
-    //console.log(error);
+    console.log(error);
   }
 }
 
