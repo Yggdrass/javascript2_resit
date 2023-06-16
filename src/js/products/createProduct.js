@@ -1,3 +1,5 @@
+import { SINGLE_PRODUCT_URL } from "";
+
 /**
  *
  * @param {string} url This is where the entryData is sent in order to be created.
