@@ -17,14 +17,14 @@ export function createProductListener() {
       const form = event.target;
       const formData = new FormData(form);
       const entryData = Object.fromEntries(formData.entries());
-      console.log("ProductToCreate :", entryData);
+      //console.log("ProductToCreate :", entryData);
 
       // Sends to the API
       createProduct(createProductURL, entryData);
       //console.log("Function :", createProduct);
     });
   } else {
-    console.log("error");
+    //console.log("error");
   }
 }
 

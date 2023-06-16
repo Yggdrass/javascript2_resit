@@ -2,7 +2,7 @@ import { API_DELETE_PRODUCT_URL } from "../api/api_base.js";
 import { deleteProduct } from "../products/deleteProduct.js";
 
 export const isLoggedIn = localStorage.getItem("accessToken");
-console.log(isLoggedIn);
+//console.log(isLoggedIn);
 
 const queryString = document.location.search;
 //console.log("QueryString", queryString);
@@ -14,13 +14,13 @@ const id = params.get("id");
 //console.log("Const ID", id);
 
 const deleteProductURL = `${API_DELETE_PRODUCT_URL}`;
-console.log("deleteProductURL", deleteProductURL);
+//console.log("deleteProductURL", deleteProductURL);
 
 const newDeleteProductURL = deleteProductURL + id;
-console.log("NewDeleteProductURL", newDeleteProductURL);
+//console.log("NewDeleteProductURL", newDeleteProductURL);
 
 const deleteButton = document.querySelector("#deleteProduct-button");
-console.log("deleteButton :", deleteButton);
+//console.log("deleteButton :", deleteButton);
 
 /**
  * This function listens for a click event and executes the function logout().
@@ -46,7 +46,7 @@ export function deleteProductListener() {
       //alert("Click");
     });
   } catch (error) {
-    console.log(error);
+    //console.log(error);
   }
 }
 

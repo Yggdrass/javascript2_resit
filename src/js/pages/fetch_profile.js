@@ -49,7 +49,7 @@ export async function fetchProfile() {
     createProfilePage(profile);
     //console.log("Function :", fetchProfile);
   } catch (error) {
-    console.log(error);
+    //console.log(error);
   }
 }
 

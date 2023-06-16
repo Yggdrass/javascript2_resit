@@ -7,20 +7,20 @@
  * @returns a success message that the entry has been created.
  */
 
-export async function createProduct(url, entryData) {
+export async function updateProduct(url, entryData) {
   /*console.log(
-    "createProduct() Url :",
-    url,
-    "createProduct() entryData :",
-    entryData
-  );*/
+      "createProduct() Url :",
+      url,
+      "createProduct() entryData :",
+      entryData
+    );*/
 
   try {
     /*const entryData = {
-      title: "Noob Noob Noob",
-    };*/
+        title: "Noob Noob Noob",
+      };*/
     const postData = {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -28,9 +28,9 @@ export async function createProduct(url, entryData) {
     };
 
     const response = await fetch(url, postData);
-    //console.log("createProduct()) Response :", response);
+    //console.log("updateProduct()) Response :", response);
     const result = await response.json();
-    //console.log("createProduct() Result :", result);
+    //console.log("updateProduct() Result :", result);
     if (response.ok) {
       alert(`Your product '${result.title}' have successfully been added!`);
     } else {
@@ -41,5 +41,5 @@ export async function createProduct(url, entryData) {
   }
 }
 
-createProduct();
+updateProduct();
 //console.log("Function :", createProduct);
