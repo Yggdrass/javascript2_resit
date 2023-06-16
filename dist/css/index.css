@@ -26,6 +26,7 @@ input {
 .loginForm-container,
 .profileCard,
 .ceateProductContainer,
+.updateProductContainer,
 .productCard,
 .productDetails {
   background-color: var(--secondary);
@@ -58,7 +59,9 @@ body {
 .createProduct-button,
 #view_product_link,
 #deleteProduct-button,
-#updateProduct-button {
+#updateProduct-button,
+.updateProductTitle-button,
+.closeModal-button {
   border: none;
   color: var(--white);
   font-weight: bold;
@@ -72,7 +75,8 @@ body {
   box-shadow: var(--black) 1px 2px 2px;
 }
 
-.logout-button {
+.logout-button,
+.closeModal-button {
   background-color: var(--secondary);
 }
 
@@ -80,13 +84,18 @@ body {
 .createProduct-button,
 #view_product_link,
 #deleteProduct-button,
-#updateProduct-button {
+#updateProduct-button,
+.updateProductTitle-button {
   background-color: var(--tertiary);
   margin: 2rem;
 }
 
 #view_product_link {
   text-decoration: none;
+}
+
+.updateProductTitle-button {
+  font-size: 1.2rem;
 }
 
 footer {
@@ -176,6 +185,33 @@ h1 {
 .productDescriptionText {
   border: solid var(--white) 2px;
   padding: 1rem;
+}
+
+.message {
+  padding: 1rem;
+  border: 1px solid var(--accent);
+  margin: 0 auto;
+}
+
+.success {
+  color: var(--white);
+  background-color: rgba(0, 255, 0, 0.1);
+  border-color: var(--tertiary);
+  box-shadow: var(--black) 1px 2px 2px;
+}
+
+.error {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-color: var(--white);
+  box-shadow: var(--black) 1px 2px 2px;
+}
+
+.warning {
+  color: var(--white);
+  background-color: rgba(255, 230, 0, 0.1);
+  border-color: var(--white);
+  box-shadow: var(--black) 1px 2px 2px;
 }
 
 /*# sourceMappingURL=index.css.map */

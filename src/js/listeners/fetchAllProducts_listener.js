@@ -6,10 +6,10 @@ const productsContainer = document.getElementById("products-container");
 const allEntriesUrl = `${API_ALL_ENTRIES_URL}`;
 //console.log("All Products URL :", allEntriesUrl);
 
-const search = document.getElementById("searchEntries");
+const search = document.getElementById("search-products");
 //console.log("Search Bar :", search);
 
-const singleProductPage = document.getElementById("product-container");
+//const singleProductPage = document.getElementById("product-container");
 //console.log("Single Product Page :", singleProductPage);
 
 /**
@@ -17,12 +17,79 @@ const singleProductPage = document.getElementById("product-container");
  * @param {parameter} results The results in json-form recieved from the call.
  *
  */
-export async function fetchAllEntries() {
+
+async function fetchAllProducts() {
   const response = await fetch(allEntriesUrl);
-  console.log("Response Json :", response);
+  //console.log("Response Json :", response);
   let results = await response.json();
-  console.log("Response Json :", results);
-  let products = results.products;
+  //console.log("Response Json :", results);
+  const products = results.products;
+  //console.log("Products :", products);
+  return products;
+}
+
+const products = await fetchAllProducts();
+console.log(products);
+
+let productsToRender = products;
+
+function renderProducts() {
+  productsContainer.innerHTML = "";
+
+  productsToRender.forEach(function (product) {
+    productsContainer.innerHTML += ` <!-- Product Listing Card -->
+    
+    <div class="productCard mx-auto mb-5">
+      <div class="px-4 py-3">
+        <!-- Image Shwcase -->
+        <div class="row pb-3">
+          <div class="col-4">
+            <img
+              src="${product.thumbnail}"
+              alt="entry image"
+            />
+          </div>
+  
+        </div>
+
+          <!-- Card Info -->
+          <div class="col-8">
+            <h5 class="productTitle">Title: ${product.title}</h5>
+            <h5 class="productId">Brand: ${product.brand}</h5>
+            <h5 class="productCreated">Category: ${product.category}</h5>
+          </div>
+        
+          <!-- Card Description -->
+        <div class="row">
+          <h5 class="productDescriptionTitle">Description</h5>
+          <p class="productDescriptionText">
+          ${product.description}
+          </p>
+        </div>
+
+      
+
+      
+        <!-- Interaction Icons On Product & Link Button -->
+        <div class="d-flex align-items-center justify-content-between">
+          <a id="view_product_link" href="product_details.html?id=${product.id}">VIEW PRODUCT</a>
+
+          
+        </div>
+      </div>
+    </div> `;
+  });
+}
+
+renderProducts();
+
+/*export async function fetchAllEntries() {
+  const response = await fetch(allEntriesUrl);
+  //console.log("Response Json :", response);
+  let results = await response.json();
+  //console.log("Response Json :", results);
+  const products = results.products;
+  //console.log("Products :", products);
 
   for (let i = 0; i < products.length; i++) {
     productsContainer.innerHTML += ` <!-- Product Listing Card -->
@@ -67,11 +134,30 @@ export async function fetchAllEntries() {
       </div>
     </div> `;
     //console.log(products[i].title);
+    return products;
   }
 }
 
 fetchAllEntries();
-//console.log("Function", fetchAllEntries);
+//console.log("Function", fetchAllEntries);*/
+
+search.onkeyup = function () {
+  //console.log(event);
+
+  const searchValue = event.target.value.trim().toLowerCase();
+  console.log(searchValue);
+
+  const filteredProducts = products.filter(function (product) {
+    if (product.category.toLowerCase().includes(searchValue)) {
+      return true;
+    }
+  });
+  console.log(filteredProducts);
+
+  productsToRender = filteredProducts;
+
+  renderProducts();
+};
 
 /*
 

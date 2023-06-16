@@ -16,7 +16,7 @@ export async function loginFormListener() {
       const form = event.target;
       const formData = new FormData(form);
       const userData = Object.fromEntries(formData.entries());
-      //console.log("userToLogin :", userData);
+      console.log("userToLogin :", userData);
 
       // Sends to the API
       loginUser(loginURL, userData);

@@ -3,7 +3,9 @@
 .createProduct-button,
 #view_product_link,
 #deleteProduct-button,
-#updateProduct-button {
+#updateProduct-button,
+.updateProductTitle-button,
+.closeModal-button {
   border: none;
   color: var(--white);
   font-weight: bold;
@@ -17,7 +19,8 @@
   box-shadow: var(--black) 1px 2px 2px;
 }
 
-.logout-button {
+.logout-button,
+.closeModal-button {
   background-color: var(--secondary);
 }
 
@@ -25,11 +28,16 @@
 .createProduct-button,
 #view_product_link,
 #deleteProduct-button,
-#updateProduct-button {
+#updateProduct-button,
+.updateProductTitle-button {
   background-color: var(--tertiary);
   margin: 2rem;
 }
 
 #view_product_link {
   text-decoration: none;
+}
+
+.updateProductTitle-button {
+  font-size: 1.2rem;
 }

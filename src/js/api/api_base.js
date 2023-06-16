@@ -14,7 +14,7 @@ export const SINGLE_PRODUCT_URL = "https://dummyjson.com/products/";
 
 export const API_CREATE_PRODUCT_URL = "https://dummyjson.com/products/add";
 
-//export const updateProductUrl = `${baseUrl} + products/id`;
+export const API_UPDATE_PRODUCT_URL = "https://dummyjson.com/products/";
 
 export const API_DELETE_PRODUCT_URL = "https://dummyjson.com/products/";
 
