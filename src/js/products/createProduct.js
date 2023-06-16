@@ -1,4 +1,4 @@
-import { SINGLE_PRODUCT_URL } from "";
+import { createAlertMessage } from "../components/createAlertMessage";
 
 /**
  *
