@@ -17,7 +17,7 @@ export function redirectListener() {
       window.location.replace("./home.html");
     });
   } else {
-    //console.log("Error : User is logged out");
+    console.log("User is not logged in");
   }
 }
 

@@ -34,7 +34,7 @@ export async function loginUser(url, userData) {
     localStorage.setItem("accessToken", result.token);
 
     if (response.ok) {
-      alert("${result.username} You have successfully logged in!");
+      alert(`${result.username} You have successfully logged in!`);
       save("profile", result);
       location.href = `./profile.html?view=profile&name=${result.username}`;
     } else {

@@ -1,16 +1,16 @@
 import { API_ALL_ENTRIES_URL } from "../api/api_base.js";
 
 const productsContainer = document.getElementById("products-container");
-console.log("Entries Container :", productsContainer);
+//console.log("Products Container :", productsContainer);
 
 const allEntriesUrl = `${API_ALL_ENTRIES_URL}`;
-console.log("All Entries URL :", allEntriesUrl);
+//console.log("All Products URL :", allEntriesUrl);
 
 const search = document.getElementById("searchEntries");
-console.log("Search Bar :", search);
+//console.log("Search Bar :", search);
 
 const singleProductPage = document.getElementById("product-container");
-console.log("Single Product Page :", singleProductPage);
+//console.log("Single Product Page :", singleProductPage);
 
 /**
  * Fetches all entries from the server and displays them on a page.
@@ -19,14 +19,14 @@ console.log("Single Product Page :", singleProductPage);
  */
 export async function fetchAllEntries() {
   const response = await fetch(allEntriesUrl);
-  //console.log("Response Json :", response);
+  console.log("Response Json :", response);
   let results = await response.json();
-  //console.log("Response Json :", results);
+  console.log("Response Json :", results);
   let products = results.products;
 
   for (let i = 0; i < products.length; i++) {
     productsContainer.innerHTML += ` <!-- Product Listing Card -->
-    <a href="product_details.html?id=${products[i].id}">
+    
     <div class="productCard mx-auto mb-5">
       <div class="px-4 py-3">
         <!-- Image Shwcase -->
@@ -57,14 +57,15 @@ export async function fetchAllEntries() {
 
       
 
+      
+        <!-- Interaction Icons On Product & Link Button -->
+        <div class="d-flex align-items-center justify-content-between">
+          <a id="view_product_link" href="product_details.html?id=${products[i].id}">VIEW PRODUCT</a>
 
-        <!-- Interaction Icons On Entry -->
-        <div class="px-3 d-flex justify-content-md-end">
-          <i class="fa-solid fa-gavel d-flex-row"></i>
+          
         </div>
       </div>
-    </div>
-    </a> `;
+    </div> `;
     //console.log(products[i].title);
   }
 }

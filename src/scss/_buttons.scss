@@ -1,6 +1,9 @@
 .logout-button,
 .login-button,
-.createProduct-button {
+.createProduct-button,
+#view_product_link,
+#deleteProduct-button,
+#updateProduct-button {
   border: none;
   color: var(--white);
   font-weight: bold;
@@ -19,7 +22,14 @@
 }
 
 .login-button,
-.createProduct-button {
+.createProduct-button,
+#view_product_link,
+#deleteProduct-button,
+#updateProduct-button {
   background-color: var(--tertiary);
   margin: 2rem;
+}
+
+#view_product_link {
+  text-decoration: none;
 }

@@ -5,6 +5,7 @@
 export function logout() {
   try {
     localStorage.removeItem("accessToken");
+    localStorage.removeItem("profile");
     location.href = "./index.html";
     alert("You have successfully logged out!");
   } catch (error) {
