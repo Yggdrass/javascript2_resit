@@ -15,6 +15,9 @@ const singleProductUrl = `${SINGLE_PRODUCT_URL}`;
 const newSingleProductUrl = "https://dummyjson.com/products/" + id;
 //console.log("newSingleProductUrl :", newSingleProductUrl);
 
+const isLoggedIn = localStorage.getItem("accessToken");
+console.log("Users Token :", isLoggedIn);
+
 export async function deleteProduct(url, method) {
   /*console.log(
     "createProduct() Url :",
@@ -34,12 +37,12 @@ export async function deleteProduct(url, method) {
     //console.log("deleteProduct() Result :", result);
     //console.log("deleteProduct() Product Is Deleted :", result.isDeleted);
     //console.log("deleteProduct() Product Was Deleted On :", result.deletedOn);
-    if (response.ok) {
+    if (isLoggedIn && response.ok) {
       alert(
         `Your product ${result.title} have successfully been deleted: ${result.isDeleted} (true/false) on: ${result.deletedOn}!`
       );
     } else {
-      alert("Error! Product failed to be deleted!");
+      alert("You need to be logged in to delete this product!");
     }
   } catch (error) {
     //console.log(error);

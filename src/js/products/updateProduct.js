@@ -7,6 +7,9 @@
  * @returns a success message that the entry has been created.
  */
 
+const isLoggedIn = localStorage.getItem("accessToken");
+console.log("Users Token :", isLoggedIn);
+
 export async function updateProduct(url, entryData) {
   /*console.log(
       "createProduct() Url :",
@@ -31,10 +34,10 @@ export async function updateProduct(url, entryData) {
     //console.log("updateProduct()) Response :", response);
     const result = await response.json();
     //console.log("updateProduct() Result :", result);
-    if (response.ok) {
+    if (isLoggedIn && response.ok) {
       alert(`Your product '${result.title}' have successfully been added!`);
     } else {
-      alert("Error! Product failed to add!");
+      alert("You need to be logged in to edit the title of this product!");
     }
   } catch (error) {
     //console.log(error);
