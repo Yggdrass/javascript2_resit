@@ -1,4 +1,5 @@
 import { SINGLE_PRODUCT_URL } from "../api/api_base.js";
+//import { createAlertMessage } from "../components/createAlertMessage.js";
 
 const queryString = document.location.search;
 //console.log("QueryString", queryString);
@@ -16,7 +17,7 @@ const newSingleProductUrl = "https://dummyjson.com/products/" + id;
 //console.log("newSingleProductUrl :", newSingleProductUrl);
 
 const isLoggedIn = localStorage.getItem("accessToken");
-console.log("Users Token :", isLoggedIn);
+//console.log("Users Token :", isLoggedIn);
 
 export async function deleteProduct(url, method) {
   /*console.log(

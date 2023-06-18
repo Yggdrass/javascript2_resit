@@ -37,7 +37,7 @@ export function deleteProductListener() {
   try {
     deleteButton.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log(e);
+      //console.log(e);
       const deleteOptions = { method: "DELETE" };
 
       // Sends to the API
