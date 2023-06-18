@@ -2,7 +2,7 @@ import { logout } from "../authentication/logout.js";
 //import { updateLoginVisibility } from "../../ui/auth.js";
 
 /**
- * This function listens for a click event and executes the function logout().
+ * This function listens for a click event ono the logout button in the Nav and executes the function logout().
  */
 export function logoutListener() {
   const logoutButton = document.querySelector(".logout-button");

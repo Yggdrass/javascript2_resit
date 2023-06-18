@@ -21,12 +21,15 @@ const createProductContainer = document.getElementById(
 const token = localStorage.getItem("accessToken");
 //console.log("AccessToken :", token);
 
+const title = document.querySelector("title");
+//console.log("Page Title :", title);
+
 /**
- * Fetches the login information of the user and creates a profilepage and a form to create an entry
- * @param {token} Accesstoken This is where the accesstoken of the current logged in user will be sent.
+ * Fetches the login information of the user and creates a profilepage at ./profile.html.
+ * @param {token} Accesstoken This is where the accesstoken of the current logged in user will be put.
  * @param {profileUrl} ProfileUrl This is the URL that is needed to be called with an async function in order to get the info about the current logged in user.
- * @param {profilePageContainer} ProfileContainer this where the profile page will be loaded into as inner.HTML.
- * @param {createProductContainer} createProductContainer this where the create entry form will be loaded into as inner.HTML.
+ * @param {profilePageContainer} ProfileContainer this is where the profile page will be loaded into as inner.HTML.
+ * @param {createProductContainer} createProductContainer this where the add product form will be loaded into as inner.HTML.
  */
 
 export async function fetchProfile() {
@@ -62,10 +65,12 @@ fetchProfile();
  */
 
 export function createProfilePage(profile) {
+  title.innerHTML += `EC | ${profile.username}s profile page`;
+
   profilePageContainer.innerHTML += `
 
 
-  <!-- Page Title -->
+  <!-- Page Header -->
   <div class="d-flex-column text-center pb-4">
     <h1 class="homePageTitle py-2">${profile.username}'s profile page</h1>
   </div>
@@ -124,48 +129,3 @@ export function createProfilePage(profile) {
 
 `;
 }
-
-/**
- * Creates a form to create an entry. This form will be placed on the div it has a name connected to.
- */
-
-/*export function createProductForm() {
-  createProductContainer.innerHTML += `
-<!-- Create Entry Container -->
-      <div id="ceateProductContainer" class="artListingsContainer  mx-auto mt-3">
-        <!-- Create Product Card -->
-        <div class="container align-items-center justify-content-center mx-auto">
-          <div class=" d-flex-column product-info px-4 py-3">
-            <div class="row pb-3">
-              <h2 class="text-center">CREATE PRODUCT</h2>
-            </div>
-
-            <div class="row d-flex-column justify-content-center pb-3">
-              <form id="createProduct">
-                <!-- product Title -->
-                <div class="col-10 mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="title"
-                    name="title"
-                    placeholder="Title of product"
-                  />
-                </div>
-
-
-                
-
-                <!-- Submit Entry Button -->
-                <div class="col-12 d-flex justify-content-md-end pt-3">
-                  <button class="button createProduct-button" type="submit">
-                    CREATE PRODUCT
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>`;
-}*/

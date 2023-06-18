@@ -1,5 +1,4 @@
 import { save } from "../storage/save.js";
-//import { createAlertMessage } from "../components/createAlertMessage";
 
 /**
  * This function logs the user in and sends them to their profile page.
@@ -9,7 +8,7 @@ import { save } from "../storage/save.js";
  */
 
 export async function loginUser(url, userData) {
-  console.log("loginUser() Url :", url, "loginUser() userData :", userData);
+  //console.log("loginUser() Url :", url, "loginUser() userData :", userData);
   try {
     /*const userData = {
       username: "kminchelle",
@@ -24,12 +23,12 @@ export async function loginUser(url, userData) {
     };
 
     const response = await fetch(url, postData);
-    console.log("loginUser() Response :", response);
+    //console.log("loginUser() Response :", response);
     const result = await response.json();
-    console.log("loginUser() Result :", result);
+    //console.log("loginUser() Result :", result);
 
     const accessToken = result.token;
-    console.log("loginUser() AccessToken :", result.token);
+    //console.log("loginUser() AccessToken :", result.token);
 
     localStorage.setItem("accessToken", result.token);
 
@@ -45,17 +44,3 @@ export async function loginUser(url, userData) {
     console.log(error);
   }
 }
-
-//loginUser();
-
-/*fetch("https://dummyjson.com/auth/login", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    username: "kminchelle",
-    password: "0lelplR",
-    // expiresInMins: 60, // optional
-  }),
-})
-  .then((res) => res.json())
-  .then(console.log);*/

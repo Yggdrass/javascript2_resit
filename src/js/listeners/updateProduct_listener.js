@@ -17,7 +17,8 @@ const newUpdateProductURL = updateProductURL + id;
 //console.log("NewUpdateProductURL", newUpdateProductURL);
 
 /**
- * This function gathers the information from a form and passes it to the server as an Product.
+ * This function gathers the title from a update form on the products details page and passes it to the server as a new Product title.
+ * It also passes in the URL for the API call to successfully simulate the updating of a product's title.
  */
 export function updateProductListener() {
   const updateProductForm = document.getElementById("updateProductTitle");
