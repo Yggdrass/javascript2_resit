@@ -40,6 +40,7 @@ function createHtml(products) {
             <img
             src="${products.thumbnail}"
             alt="entry image"
+            id="productThumbnail"
             />
             <!-- Card Info -->
             <div class="col-8">
@@ -55,12 +56,12 @@ function createHtml(products) {
 
             
 
-            <div>
-                <img src="${products.images[0]}" alt="product image"/>
-                <img src="${products.images[1]}" alt="product image"/>
-                <img src="${products.images[2]}" alt="product image"/>
-                <img src="${products.images[3]}" alt="product image"/>
-                <img src="${products.images[4]}" alt="product image"/>
+            <div class="productImages">
+                <img src="${products.images[0]}" alt="product image" id="productThumbnail"/>
+                <img src="${products.images[1]}" alt="product image" id="productThumbnail"/>
+                <img src="${products.images[2]}" alt="product image" id="productThumbnail"/>
+                <img src="${products.images[3]}" alt="product image" id="productThumbnail"/>
+                <img src="${products.images[4]}" alt="product image" id="productThumbnail"/>
             </div>
         </div>
     `;

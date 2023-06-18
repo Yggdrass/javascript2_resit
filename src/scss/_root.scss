@@ -4,8 +4,9 @@
   --secondary: #e09027;
   --tertiary: #23931f;
   --white: #ffffff;
-
-  box-sizing: border-box;
   font-size: 14px;
-  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
