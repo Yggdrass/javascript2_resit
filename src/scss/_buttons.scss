@@ -1,3 +1,20 @@
+.productsPage {
+  text-decoration: none;
+}
+
+.updateProductTitle-button {
+  font-size: 1.2rem;
+}
+
+#view_product_link {
+  text-decoration: none;
+}
+
+.logout-button,
+.closeModal-button {
+  background-color: var(--secondary);
+}
+
 .logout-button,
 .login-button,
 .createProduct-button,
@@ -8,21 +25,16 @@
 .closeModal-button,
 .productsPage {
   border: none;
-  color: var(--white);
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
   border-radius: 10px;
-  padding: 0.5rem 0.8rem;
+  box-shadow: var(--black) 1px 2px 2px;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
   max-height: 10rem;
   max-width: 10rem;
+  padding: 0.5rem 0.8rem;
   text-shadow: var(--black) 1px 2px;
-  box-shadow: var(--black) 1px 2px 2px;
-}
-
-.logout-button,
-.closeModal-button {
-  background-color: var(--secondary);
 }
 
 .login-button,
@@ -34,16 +46,4 @@
 .productsPage {
   background-color: var(--tertiary);
   margin: 2rem;
-}
-
-#view_product_link {
-  text-decoration: none;
-}
-
-.updateProductTitle-button {
-  font-size: 1.2rem;
-}
-
-.productsPage {
-  text-decoration: none;
 }

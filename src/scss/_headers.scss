@@ -1,11 +1,15 @@
 h1 {
-  font-size: 4rem;
   color: var(--black);
+  font-size: 4rem;
 }
 
 h2 {
-  padding-top: 1rem;
   font-size: 3rem;
+  padding-top: 1rem;
+}
+
+.hero-title {
+  font-size: 4rem;
 }
 
 .profileAttribute,
@@ -16,10 +20,6 @@ h2 {
 .productDescriptionText {
   border: solid var(--white) 2px;
   padding: 1rem;
-}
-
-.hero-title {
-  font-size: 4rem;
 }
 
 @media (max-width: 400px) {
