@@ -1,9 +1,9 @@
 .navbar {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6rem;
+  max-width: 100vw;
   padding: 0;
-}
-
-.navbar-brand {
-  margin-left: 2rem;
 }
 
 .nav-link {
@@ -16,4 +16,21 @@
 
 #active {
   color: var(--tertiary);
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    margin: 0 1rem;
+  }
+
+  .nav-item {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    padding: 2rem 0 3rem 2rem;
+    justify-items: center;
+  }
 }

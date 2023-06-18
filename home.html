@@ -3,130 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      description="But & sell used and new quality products quickly and easily"
+    />
+
+    <!-- Bootstrap CSS Stylesheet -->
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+
+    <!-- SASS Stylesheet -->
     <link rel="stylesheet" href="./dist/css/index.css" />
-    <script src="https://kit.fontawesome.com/b20f5915ff.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CDN-links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Fontawsome Link -->
+    <script
+      src="https://kit.fontawesome.com/b20f5915ff.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascript Link -->
     <script src="./src/js/index.js" defer type="module"></script>
-    <title>EC-Products | Home</title>
+
+    <!-- Page Title -->
+    <title>EC-Products | Index</title>
   </head>
+
+  <!-- Body -->
   <body>
     <!-- Header -->
     <header>
-      
-        
-
-        <!-- Navbar Menu -->
-        <nav
-          class="container navbar navbar-expand-sm justify-content-md-between navbar-light bg-light"
-        >
-            <!-- Company logo & name -->
-            <a  href="/index.html"
-            class="navbar-brand align-items-center">
-              <p class="d-none">logo</p>
-              <img
-              id="redirect_logo"
-              src="./src/assets/ec_logo.png"
-              width="60"
-              height="60"
-              alt="logo"
-              />
-            </a>
-            
-
-          <div
-            class="d-flex align-items-center"
-          >
-            
-
-            <!-- Navmenu -->
-            <div
-              class="collapse navbar-collapse col-3 d-flex justify-content-md-center"
-              id="navbarNav"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a href="/home.html" class="nav-link" id="active">HOME</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/products.html" class="nav-link">PRODUCTS</a>
-                </li>
-                <li class="nav-item" data-visible="loggedIn">
-                  <a href="/profile.html" class="nav-link nav-profile"
-                    >PROFILE</a
-                  >
-                  <!-- Remove or hide this for non-registered users -->
-                </li>
-              </ul>
-            </div>
-
-            <!-- Logout button -->
-            <!-- Remove or hide this for non-registered users -->
-            <button
-            class="logout-button"
-            type="button"
-            data-auth="logout"
-            data-visible="loggedIn"
-          >
-            <span> LOGOUT</span>
-          </button>
-
-            <!-- Hamburger menu for small screens -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-target="#navbarNav"
-              data-bs-toggle="collapse"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </nav>
-      </navbar>
-    </header>
-
-    <!-- Main -->
-    <main>
-
-      <!-- This is the container for the alert messages. It will be with postion absolute so it is not a part of the HTML document flow. -->
-      <div class="alert-messages"></div>
-
-
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <a
-            href="/index.html"
-            class="navbar-brand align-items-center"
-            ><img
+      <!-- Navbar Menu -->
+      <nav class="navbar navbar-expand-lg">
+        <!-- Company logo & name -->
+        <a href="/index.html" class="navbar-brand align-items-center">
+          <img
+            id="redirect_logo"
             src="./src/assets/ec_logo.png"
             width="60"
             height="60"
             alt="logo"
-            />
+          />
         </a>
 
-        <h4 class="copyright">Copyright</h4>
+        <!-- Navmenu -->
+        <div class="collapse navbar-collapse" id="navbar-links">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="/home.html" class="nav-link" id="active">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="/products.html" class="nav-link">PRODUCTS</a>
+            </li>
+            <li class="nav-item" data-visible="loggedIn">
+              <a href="/profile.html" class="nav-link nav-profile">PROFILE</a>
+            </li>
+            <button
+              class="logout-button"
+              type="button"
+              data-auth="logout"
+              data-visible="loggedIn"
+            >
+              <span> LOGOUT</span>
+            </button>
+          </ul>
+        </div>
 
-        <div class="social-icons">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-square-facebook"></i>
+        <!-- Hamburger menu for small screens -->
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-target="#navbar-links"
+          data-bs-toggle="collapse"
+          aria-controls="navbar-collapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main-home">
+      <div>
+        <div>
+          <img src="./src/assets/ec_home_background.jpg" class="hero-image" />
         </div>
       </div>
 
+      <div class="d-flex-column justify-content-center">
+        <div class="hero-title">SHOPPING</div>
+        <div class="hero-title">MADE</div>
+        <div class="hero-title">EASY</div>
+        <div class="browseProductsButton">
+          <a href="./products.html" class="productsPage">BROWSE PRODUCTS</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <a href="/index.html" class="navbar-brand align-items-center"
+        ><img
+          src="./src/assets/ec_logo.png"
+          width="60"
+          height="60"
+          alt="logo"
+        />
+      </a>
+
+      <h4 class="copyright">Copyright</h4>
+
+      <div class="social-icons">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-square-facebook"></i>
+      </div>
     </footer>
 
     <!-- Scripts for Bootstrap JS -->
-
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

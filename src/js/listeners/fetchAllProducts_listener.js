@@ -39,28 +39,29 @@ function renderProducts() {
   productsToRender.forEach(function (product) {
     productsContainer.innerHTML += ` <!-- Product Listing Card -->
     
-    <div class="productCard mx-auto mb-5">
-      <div class="px-4 py-3">
+    <div class=" mx-auto mb-5">
+      <div class="productCard px-4 py-3">
         <!-- Image Shwcase -->
         <div class="row pb-3">
-          <div class="col-4">
+          <div class="col-6">
             <img
               src="${product.thumbnail}"
-              alt="entry image"
+              alt="product image"
+              id="productThumbnail"
             />
           </div>
   
         </div>
 
           <!-- Card Info -->
-          <div class="col-8">
+          <div class="productAttributes">
             <h5 class="productTitle">Title: ${product.title}</h5>
             <h5 class="productId">Brand: ${product.brand}</h5>
             <h5 class="productCreated">Category: ${product.category}</h5>
           </div>
         
           <!-- Card Description -->
-        <div class="row">
+        <div class="productDescription row">
           <h5 class="productDescriptionTitle">Description</h5>
           <p class="productDescriptionText">
           ${product.description}

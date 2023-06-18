@@ -5,7 +5,8 @@
 #deleteProduct-button,
 #updateProduct-button,
 .updateProductTitle-button,
-.closeModal-button {
+.closeModal-button,
+.productsPage {
   border: none;
   color: var(--white);
   font-weight: bold;
@@ -29,7 +30,8 @@
 #view_product_link,
 #deleteProduct-button,
 #updateProduct-button,
-.updateProductTitle-button {
+.updateProductTitle-button,
+.productsPage {
   background-color: var(--tertiary);
   margin: 2rem;
 }
@@ -40,4 +42,8 @@
 
 .updateProductTitle-button {
   font-size: 1.2rem;
+}
+
+.productsPage {
+  text-decoration: none;
 }
