@@ -1,7 +1,7 @@
 # javascript2_resit
 
 
-![my image](assets/Javascript2_resit_website.png)
+![my image](src/assets/Javascript2_resit_website.png)
 
 
 
