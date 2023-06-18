@@ -1,6 +1,6 @@
 {
   "name": "javascript2_resit",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Trello: https://trello.com/invite/b/LRRriuq4/ATTI4ba0cbe4dd3a1d2f4835acdc69afee831C6AAA3D/javascript2resit",
   "main": "./src/js/index.js",
   "scripts": {
