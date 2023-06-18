@@ -10,8 +10,6 @@ export const API_ALL_ENTRIES_URL = "https://dummyjson.com/products/";
 
 export const SINGLE_PRODUCT_URL = "https://dummyjson.com/products/";
 
-//export const searchProductsUrl = `${baseUrl} + products/search?q=phone`;
-
 export const API_CREATE_PRODUCT_URL = "https://dummyjson.com/products/add";
 
 export const API_UPDATE_PRODUCT_URL = "https://dummyjson.com/products/";

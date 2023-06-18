@@ -30,6 +30,9 @@ const deleteButton = document.querySelector("#deleteProduct-button");
   console.log("Click");
 });*/
 
+/**
+ * This function listens for click event in order to execute the deleteProduct() function.
+ */
 export function deleteProductListener() {
   //const deleteButton = document.querySelector(".fa-trash-can");
   //console.log("Delete Product Form :", deleteButton);
@@ -51,23 +54,3 @@ export function deleteProductListener() {
 }
 
 deleteProductListener();
-
-/*
-export function deleteProductListener() {
-  try {
-    deleteButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      console.log(event);
-      // Sends to the API
-      if (isLoggeIn) {
-        deleteProduct();
-      } else {
-        alert("The product wasn't deleted!");
-      }
-    });
-  } catch {
-    alert("You Need To Be Logged In To Use This Feature!");
-  }
-}
-
-deleteProductListener();*/

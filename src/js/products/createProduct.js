@@ -1,14 +1,16 @@
 //import { createAlertMessage } from "../components/createAlertMessage";
 
 /**
- *
- * @param {string} url This is where the entryData is sent in order to be created.
- * @param {*} entryData This is where the url from create_entry_listener.js is inserted.
- * @returns a success message that the entry has been created.
+ * This function simulates the adding of a product by passing in the input-value from the create form on the ./profile page, the ID from the searchQuery in the addressbar and then it calls the API for allowing it to add the product.
+ * @param {string} url This is where the entryData is sent in order for the product to be created.
+ * @param {*} entryData This is where the entryData is sent in order to create product with a title.
+ * @returns a success message that the products has been created if the response of the call is successful and the user is logged in.
+ * If the user is not logged in it will return a failed alert message informing the user that they need to be logged in to use this feature.
+ * The user will see an alert message in the top of the screen.
  */
 
 const isLoggedIn = localStorage.getItem("accessToken");
-console.log("Users Token :", isLoggedIn);
+//console.log("Users Token :", isLoggedIn);
 
 export async function createProduct(url, entryData) {
   /*console.log(
@@ -19,7 +21,9 @@ export async function createProduct(url, entryData) {
   );*/
 
   try {
-    /*const entryData = {
+    /*
+    // Hardcoded EntryData to use incase the API-call doesn't want to put the Title value from the Create Form Value into this function. Used as a backup in testing cases.
+    const entryData = {
       title: "Noob Noob Noob",
     };*/
     const postData = {

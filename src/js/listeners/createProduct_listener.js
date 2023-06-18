@@ -5,7 +5,8 @@ const createProductURL = `${API_CREATE_PRODUCT_URL}`;
 //console.log("createProductURL :", createProductURL);
 
 /**
- * This function gathers the information from a form and passes it to the server as an Product.
+ * This function listens for a new title value from the update product form.
+ * Then it puts that value and the API_CREATE_PRODUCT_URL in the function updateProduct() function.
  */
 export function createProductListener() {
   const createProductForm = document.getElementById("createProduct");

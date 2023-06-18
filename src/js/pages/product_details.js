@@ -18,6 +18,10 @@ const singleProductUrl = `${SINGLE_PRODUCT_URL}`;
 const newSingleProductUrl = "https://dummyjson.com/products/" + id;
 //console.log("newSingleProductUrl :", newSingleProductUrl);
 
+/**
+ * This function fetches the ID from the searchQuery in order to get the info on the product so it can be displayed in the ./details page.
+ */
+
 export async function fetchProduct() {
   try {
     const response = await fetch(newSingleProductUrl);

@@ -3,7 +3,7 @@ import { API_ALL_ENTRIES_URL } from "../api/api_base.js";
 const productsContainer = document.getElementById("products-container");
 //console.log("Products Container :", productsContainer);
 
-const allEntriesUrl = `${API_ALL_ENTRIES_URL}`;
+const allProductsUrl = `${API_ALL_ENTRIES_URL}`;
 //console.log("All Products URL :", allEntriesUrl);
 
 const search = document.getElementById("search-products");
@@ -13,13 +13,11 @@ const search = document.getElementById("search-products");
 //console.log("Single Product Page :", singleProductPage);
 
 /**
- * Fetches all entries from the server and displays them on a page.
- * @param {parameter} results The results in json-form recieved from the call.
- *
+ * This function makes an API call in order to get the entire list of products.
+ * @returns a list of all products in the API-call.
  */
-
 async function fetchAllProducts() {
-  const response = await fetch(allEntriesUrl);
+  const response = await fetch(allProductsUrl);
   //console.log("Response Json :", response);
   let results = await response.json();
   //console.log("Response Json :", results);
@@ -33,6 +31,9 @@ console.log(products);
 
 let productsToRender = products;
 
+/**
+ * This function renders the list of products so it is possible to both view the list and search through it with a onkeyup event.
+ */
 function renderProducts() {
   productsContainer.innerHTML = "";
 
@@ -84,64 +85,10 @@ function renderProducts() {
 
 renderProducts();
 
-/*export async function fetchAllEntries() {
-  const response = await fetch(allEntriesUrl);
-  //console.log("Response Json :", response);
-  let results = await response.json();
-  //console.log("Response Json :", results);
-  const products = results.products;
-  //console.log("Products :", products);
-
-  for (let i = 0; i < products.length; i++) {
-    productsContainer.innerHTML += ` <!-- Product Listing Card -->
-    
-    <div class="productCard mx-auto mb-5">
-      <div class="px-4 py-3">
-        <!-- Image Shwcase -->
-        <div class="row pb-3">
-          <div class="col-4">
-            <img
-              src="${products[i].thumbnail}"
-              alt="entry image"
-            />
-          </div>
-  
-        </div>
-
-          <!-- Card Info -->
-          <div class="col-8">
-            <h5 class="productTitle">Title: ${products[i].title}</h5>
-            <h5 class="productId">Brand: ${products[i].brand}</h5>
-            <h5 class="productCreated">Category: ${products[i].category}</h5>
-          </div>
-        
-          <!-- Card Description -->
-        <div class="row">
-          <h5 class="productDescriptionTitle">Description</h5>
-          <p class="productDescriptionText">
-          ${products[i].description}
-          </p>
-        </div>
-
-      
-
-      
-        <!-- Interaction Icons On Product & Link Button -->
-        <div class="d-flex align-items-center justify-content-between">
-          <a id="view_product_link" href="product_details.html?id=${products[i].id}">VIEW PRODUCT</a>
-
-          
-        </div>
-      </div>
-    </div> `;
-    //console.log(products[i].title);
-    return products;
-  }
-}
-
-fetchAllEntries();
-//console.log("Function", fetchAllEntries);*/
-
+/**
+ * This function makes it possible to search through the list of products in the renderProducts() function. It takes the search value from an input field in the ./products.html,
+ * and then updates the list with product categories that matches the search value.
+ */
 search.onkeyup = function () {
   //console.log(event);
 

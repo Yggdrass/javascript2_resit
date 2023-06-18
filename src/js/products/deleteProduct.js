@@ -18,6 +18,14 @@ const newSingleProductUrl = "https://dummyjson.com/products/" + id;
 const isLoggedIn = localStorage.getItem("accessToken");
 //console.log("Users Token :", isLoggedIn);
 
+/**
+ * This function simulates the deletion of the product by passing in the ID from the searchQuery in the addressbar and then it calls the API for allowing the product to be deleted.
+ * @param {*} url This is the URL for the call to be able to delete the product. It is declared in the deleteProduct_listener.js and passed into this function.
+ * @param {*} method This is the method for the API-call to be able to successfull. The method is declared in the deleteProduct_listener.js and passed into this function. This method should be "DELETE".
+ * @returns a success message that the products has been deleted if the response of the call is successful and the user is logged in.
+ * If the user is not logged in it will return a failed alert message informing the user that they need to be logged in to use this feature.
+ * The user will see an alert message in the top of the screen.
+ */
 export async function deleteProduct(url, method) {
   /*console.log(
     "createProduct() Url :",
@@ -27,10 +35,6 @@ export async function deleteProduct(url, method) {
   );*/
 
   try {
-    /*const entryData = {
-        title: "Noob Noob Noob",
-      };*/
-
     const response = await fetch(url, method);
     //console.log("deleteProduct()) Response :", response);
     const result = await response.json();

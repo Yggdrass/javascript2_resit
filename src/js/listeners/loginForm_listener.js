@@ -5,7 +5,7 @@ const loginURL = `${API_LOGIN_URL}`;
 //console.log("loginUrl :", loginURL);
 
 /**
- * This form gathers information from a form and passes it into the function loginUser().
+ * This form gathers information from a login form and passes it into the function loginUser().
  */
 export async function loginFormListener() {
   const loginForm = document.getElementById("loginForm");
