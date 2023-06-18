@@ -1,7 +1,5 @@
 # javascript2_resit
 
-![my image](assets/Javascript2_resit_website.png)
-
 ## Links:
 
 Trello: https://trello.com/invite/b/LRRriuq4/ATTI4ba0cbe4dd3a1d2f4835acdc69afee831C6AAA3D/javascript2resit
