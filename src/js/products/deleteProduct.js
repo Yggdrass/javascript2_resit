@@ -1,5 +1,4 @@
 import { SINGLE_PRODUCT_URL } from "../api/api_base.js";
-//import { createAlertMessage } from "../components/createAlertMessage.js";
 
 const queryString = document.location.search;
 //console.log("QueryString", queryString);
