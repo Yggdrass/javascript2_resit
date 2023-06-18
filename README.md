@@ -1,6 +1,10 @@
 # javascript2_resit
 
 
+![my image](assets/Javascript2_resit_website.png)
+
+
+
 ## How to use the website's functionalities:
 
 * Login with any users username and password from this link: https://dummyjson.com/users.
