@@ -1,10 +1,19 @@
+input {
+  min-width: 20rem;
+}
+
+.browseProductsButton {
+  padding-top: 2rem;
+  text-align: center;
+}
+
 .container {
+  align-items: center;
+  //background-color: rgba(255, 255, 0, 0.589);
   border: solid red 2px;
   box-sizing: inherit;
-  //background-color: rgba(255, 255, 0, 0.589);
-  height: 100%;
   display: flex;
-  align-items: center;
+  height: 100%;
   justify-content: space-between;
   padding: 0;
 }
@@ -14,14 +23,30 @@
   border: var(--secondary);
 }
 
-input {
-  min-width: 20rem;
+.productCard {
+  align-items: center;
+  justify-content: center;
 }
 
-#loginPassword,
-#loginUsername {
-  background-color: var(--white);
-  padding: 1rem;
+.productImages {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchTitle {
+  padding-bottom: 2rem;
+}
+
+#loginForm {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#searchProducts {
+  flex-direction: column;
 }
 
 .loginForm-container,
@@ -32,45 +57,34 @@ input {
 .productDetails {
   background-color: var(--secondary);
   color: var(--white);
+  display: flex;
+  flex-direction: column;
   max-width: 50rem;
-  display: flex;
-  flex-direction: column;
 }
 
-#loginForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.productCard {
-  align-items: center;
-  justify-content: center;
-}
-
-.browseProductsButton {
-  text-align: center;
-  padding-top: 2rem;
-}
-
-#searchProducts {
-  flex-direction: column;
-}
-
-.searchTitle {
-  padding-bottom: 2rem;
-}
-
-.productImages {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+#loginPassword,
+#loginUsername {
+  background-color: var(--white);
+  padding: 1rem;
 }
 
 @media (max-width: 400px) {
+  input {
+    min-width: 5rem;
+  }
+
   .container {
     max-width: 100%;
+  }
+
+  .searchTitle {
+    padding-bottom: 2rem;
+  }
+
+  .profileAttributeContainer,
+  .profileAttributes {
+    flex-direction: column;
+    padding-top: 2rem;
   }
 
   .offcanvas-body,
@@ -80,27 +94,13 @@ input {
     padding: 0;
   }
 
-  .profileAttributeContainer,
-  .profileAttributes {
-    flex-direction: column;
-    padding-top: 2rem;
-  }
-
   .productCard,
   #productThumbnail,
   #searchProducts,
   .productAttributes,
   .productDescription {
-    max-width: 100vw;
     flex-direction: column;
+    max-width: 100vw;
     padding: 0 2rem;
-  }
-
-  .searchTitle {
-    padding-bottom: 2rem;
-  }
-
-  input {
-    min-width: 5rem;
   }
 }
